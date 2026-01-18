@@ -18,6 +18,6 @@
         
     },
     "DisabledByDefault": false,
-    "IncludesAssetPack": true,
+    "IncludesAssetPack": false,
     "Main": "io.github.drakonforge.exampleplugin.ExamplePlugin"
 }
