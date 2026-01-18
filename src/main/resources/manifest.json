@@ -1,0 +1,23 @@
+{
+    "Group": "io.github.drakonforge",
+    "Name": "ExamplePlugin",
+    "Version": "1.0.0",
+    "Description": "An example plugin for Hytale modding.",
+    "Authors": [
+        {
+            "Name": "Drakon",
+            "Url": "https://github.com/Drakonkinst"
+        }
+    ],
+    "Website": "https://github.com/DrakonForge",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "IncludesAssetPack": true,
+    "Main": "io.github.drakonforge.exampleplugin.ExamplePlugin"
+}
