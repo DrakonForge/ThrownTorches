@@ -2,7 +2,6 @@ package io.github.drakonforge.throwntorches;
 
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.logger.HytaleLogger;
-import com.hypixel.hytale.server.core.asset.type.buildertool.config.BlockTypeListAsset;
 import com.hypixel.hytale.server.core.modules.entity.item.ItemComponent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -39,14 +38,10 @@ public class ThrownTorchesPlugin extends JavaPlugin {
 
         this.placeOnGroundComponentType = this.getEntityStoreRegistry().registerComponent(
                 PlaceOnGround.class, PlaceOnGround::new);
-    }
-
-    @Override
-    protected void start() {
-        LOGGER.atInfo().log("Starting plugin " + this.getName());
         this.getEntityStoreRegistry().registerSystem(new RegisterPlaceOnGroundSystem(
-                ItemComponent.getComponentType(), BlockTypeListAsset.getAssetMap().getAsset("Handheld_Torches")));
+                ItemComponent.getComponentType()));
         this.getEntityStoreRegistry().registerSystem(new PlaceThrownTorchSystem());
+        LOGGER.atInfo().log("Finished setting up plugin " + this.getName() + " v" + this.getManifest().getVersion().toString());
     }
 
     public ComponentType<EntityStore, PlaceOnGround> getPlaceOnGroundComponentType() {

@@ -15,32 +15,30 @@ import com.hypixel.hytale.server.core.modules.entity.item.PreventItemMerging;
 import com.hypixel.hytale.server.core.modules.physics.component.Velocity;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import io.github.drakonforge.throwntorches.component.PlaceOnGround;
-import java.util.HashSet;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 public class RegisterPlaceOnGroundSystem extends HolderSystem<EntityStore> {
     private final ComponentType<EntityStore, ItemComponent> itemComponentType;
-    private final HashSet<String> handheldTorchItems;
 
-    public RegisterPlaceOnGroundSystem(ComponentType<EntityStore, ItemComponent> itemComponentType, BlockTypeListAsset handheldTorchBlockTypeListAsset) {
+    public RegisterPlaceOnGroundSystem(ComponentType<EntityStore, ItemComponent> itemComponentType) {
         if (itemComponentType == null) {
             throw new IllegalArgumentException();
         }
         this.itemComponentType = itemComponentType;
-        if (handheldTorchBlockTypeListAsset == null) {
-            throw new IllegalArgumentException();
-        }
-        handheldTorchItems = handheldTorchBlockTypeListAsset.getBlockTypeKeys();
     }
+
     @Override
     public void onEntityAdd(@NonNullDecl Holder<EntityStore> holder,
             @NonNullDecl AddReason addReason, @NonNullDecl Store<EntityStore> store) {
         ItemComponent itemComponent = holder.getComponent(itemComponentType);
         assert itemComponent != null;
         ItemStack stack = itemComponent.getItemStack();
-        if (stack != null && handheldTorchItems.contains(stack.getBlockKey()) && stack.getQuantity() == 1) {
-            holder.ensureComponent(PlaceOnGround.getComponentType());
+        if (stack != null && stack.getQuantity() == 1) {
+            BlockTypeListAsset asset = BlockTypeListAsset.getAssetMap().getAsset("Handheld_Torches");
+            if (asset != null && asset.getBlockTypeKeys().contains(stack.getBlockKey())) {
+                holder.ensureComponent(PlaceOnGround.getComponentType());
+            }
         }
     }
 

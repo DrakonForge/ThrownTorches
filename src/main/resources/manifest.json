@@ -1,7 +1,7 @@
 {
     "Group": "DrakonForge",
     "Name": "ThrownTorches",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "Description": "Makes torches automatically place themselves where you throw them!",
     "Authors": [
         {
@@ -12,7 +12,8 @@
     "Website": "https://github.com/DrakonForge",
     "ServerVersion": "*",
     "Dependencies": {
-        
+        "Hytale:ItemModule": "*",
+        "Hytale:BlockTypeModule": "*"
     },
     "OptionalDependencies": {
         
