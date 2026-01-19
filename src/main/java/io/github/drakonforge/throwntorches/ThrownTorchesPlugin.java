@@ -35,7 +35,7 @@ public class ThrownTorchesPlugin extends JavaPlugin {
     @Override
     protected void setup() {
         instance = this;
-        LOGGER.atInfo().log("Setting up plugin " + this.getName() + " version " + this.getManifest().getVersion().toString());
+        LOGGER.atInfo().log("Setting up plugin " + this.getName() + " v" + this.getManifest().getVersion().toString());
 
         this.placeOnGroundComponentType = this.getEntityStoreRegistry().registerComponent(
                 PlaceOnGround.class, PlaceOnGround::new);
