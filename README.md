@@ -1,5 +1,7 @@
 # Thrown Torches
 
+[GitHub](https://github.com/DrakonForge/ThrownTorches) | [Modtale](https://modtale.net/mod/thrown-torches)
+
 Ever wish you could throw a torch down into a dark abyss to find out what's at the bottom?
 
 Well, that isn't a problem with Hytale's dynamic lighting ... but with this mod, your torch places
