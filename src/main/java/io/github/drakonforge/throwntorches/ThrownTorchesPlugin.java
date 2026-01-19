@@ -41,7 +41,7 @@ public class ThrownTorchesPlugin extends JavaPlugin {
         this.getEntityStoreRegistry().registerSystem(new RegisterPlaceOnGroundSystem(
                 ItemComponent.getComponentType()));
         this.getEntityStoreRegistry().registerSystem(new PlaceThrownTorchSystem());
-        LOGGER.atInfo().log("Finished setting up plugin " + this.getName() + " v" + this.getManifest().getVersion().toString());
+        LOGGER.atInfo().log("Finished setting up plugin " + this.getName());
     }
 
     public ComponentType<EntityStore, PlaceOnGround> getPlaceOnGroundComponentType() {
