@@ -6,8 +6,9 @@ Well, that isn't a problem with Hytale's dynamic lighting ... but with this mod,
 itself as a block so it will never go out!
 
 <p align="center">
-  <img width="256" height="256" alt="ThrownTorches" src="https://github.com/user-attachments/assets/d127c521-1cce-43cd-b707-9631b2a11a27" />
+  <img width="256" height="256" alt="ThrownTorches Logo" src="https://github.com/user-attachments/assets/4a761b78-de67-49fa-939e-aef5f68a4860" />
 </p>
+
 
 ## Features
 
@@ -19,4 +20,3 @@ Torches will not be placed if there is no room, and will never destroy blocks or
 
 You can override the list of items which can be thrown in this way, even extending it to work beyond
 torches! Simply create an asset pack which overwrites the `Handheld_Torches` block type list and the mod will adjust accordingly.
-
