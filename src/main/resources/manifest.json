@@ -2,7 +2,7 @@
     "Group": "io.github.drakonforge",
     "Name": "ThrownTorches",
     "Version": "1.0.0",
-    "Description": "An example plugin for Hytale modding.",
+    "Description": "Makes torches automatically place themselves where you throw them!",
     "Authors": [
         {
             "Name": "Drakon",
