@@ -1,6 +1,6 @@
 {
     "Group": "io.github.drakonforge",
-    "Name": "ExamplePlugin",
+    "Name": "ThrownTorches",
     "Version": "1.0.0",
     "Description": "An example plugin for Hytale modding.",
     "Authors": [
@@ -18,6 +18,6 @@
         
     },
     "DisabledByDefault": false,
-    "IncludesAssetPack": false,
-    "Main": "io.github.drakonforge.exampleplugin.ExamplePlugin"
+    "IncludesAssetPack": true,
+    "Main": "io.github.drakonforge.throwntorches.ThrownTorchesPlugin"
 }
