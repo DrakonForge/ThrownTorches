@@ -10,7 +10,7 @@
         }
     ],
     "Website": "https://github.com/DrakonForge",
-    "ServerVersion": "*",
+    "ServerVersion": "2026.02.11-255364b8e",
     "Dependencies": {
         "Hytale:ItemModule": "*",
         "Hytale:BlockTypeModule": "*"
