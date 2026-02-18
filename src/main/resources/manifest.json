@@ -1,7 +1,7 @@
 {
     "Group": "DrakonForge",
     "Name": "ThrownTorches",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "Description": "Makes torches automatically place themselves where you throw them!",
     "Authors": [
         {
